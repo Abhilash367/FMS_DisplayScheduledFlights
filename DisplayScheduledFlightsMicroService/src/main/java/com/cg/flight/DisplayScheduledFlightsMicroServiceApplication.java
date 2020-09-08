@@ -11,5 +11,6 @@ public class DisplayScheduledFlightsMicroServiceApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DisplayScheduledFlightsMicroServiceApplication.class, args);
 	}
-
+	
 }
+

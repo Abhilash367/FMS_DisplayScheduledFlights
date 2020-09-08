@@ -18,4 +18,7 @@ public class FlightAdvice {
 	public FlightErrorMessage handleSearchException(SearchException ex) {
 		return new FlightErrorMessage(HttpStatus.NOT_FOUND.toString(),ex.getMessage(), LocalDateTime.now().toString());
 	}
+	
+
+
 }

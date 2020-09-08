@@ -8,4 +8,5 @@ import com.cg.flight.exceptions.SearchException;
 
 public interface SearchService {
   public List<ScheduledFlight> searchFlights(String src, String dest, LocalDate dt)throws SearchException;
+  
 }
