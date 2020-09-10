@@ -3,37 +3,44 @@ package com.cg.flight.dto;
 import java.util.List;
 
 public class ErrorInfo {
-	private String status;
-	private String message;
+	public String message;
 	
+	public String code;
 	
-	public ErrorInfo(String status, String message) {
+	public List<String> messages;
+
+	public ErrorInfo(String message, String code) {
 		super();
-		this.status = status;
 		this.message = message;
+		this.code = code;
+		this.messages = messages;
 	}
-
-
-	public String getStatus() {
-		return status;
-	}
-
-
-	public void setStatus(String status) {
-		this.status = status;
-	}
-
 
 	public String getMessage() {
 		return message;
 	}
 
-
 	public void setMessage(String message) {
 		this.message = message;
 	}
+
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
+
+	public List<String> getMessages() {
+		return messages;
+	}
+
+	public void setMessages(List<String> messages) {
+		this.messages = messages;
+	}
 	
-	
+
 	
 	
 	

@@ -10,8 +10,7 @@ import org.springframework.stereotype.Service;
 import com.cg.flight.dao.ILoginDao;
 import com.cg.flight.entity.User;
 import com.cg.flight.exceptions.LoginException;
-
-
+import com.cg.flight.util.FlightConstants;
 
 @Service
 public class LoginServiceImpl  implements  ILoginService{
@@ -31,11 +30,11 @@ public class LoginServiceImpl  implements  ILoginService{
 		if(optUser.isPresent()) {
 			user = optUser.get();
 			if(!user.getPassword().contentEquals(password))
-					throw new LoginException("password is Wrong, Check your Password");
+					throw new LoginException(FlightConstants.PASS_NOT_VALID);
 			logger.info("User Authenticated for " + contactNo);
 			return user;
 		}
-		throw new LoginException("Check your Credentials");
+		throw new LoginException(FlightConstants.USER_NOT_VALID);
 		
 	
 	}

@@ -7,7 +7,9 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import com.cg.flight.dto.ErrorInfo;
 import com.cg.flight.dto.FlightErrorMessage;
+import com.cg.flight.exceptions.LoginException;
 import com.cg.flight.exceptions.SearchException;
 
 @RestControllerAdvice
@@ -19,6 +21,12 @@ public class FlightAdvice {
 		return new FlightErrorMessage(HttpStatus.NOT_FOUND.toString(),ex.getMessage(), LocalDateTime.now().toString());
 	}
 	
+	@ExceptionHandler
+	@ResponseStatus(code=HttpStatus.FORBIDDEN)
+	public ErrorInfo handleLoginException(LoginException ex) {
+		
+		return new ErrorInfo(HttpStatus.FORBIDDEN.toString(),ex.getMessage());
+		
 
-
+	}
 }
