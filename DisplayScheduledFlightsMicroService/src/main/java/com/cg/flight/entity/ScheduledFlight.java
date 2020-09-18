@@ -15,6 +15,11 @@ import javax.persistence.Transient;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
+/*
+ * The persistent class for the flight_schedule database table.
+ * 
+ */
+
 @Entity
 @DynamicInsert
 @DynamicUpdate

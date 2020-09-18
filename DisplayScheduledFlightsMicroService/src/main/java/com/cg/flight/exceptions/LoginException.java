@@ -1,5 +1,6 @@
 package com.cg.flight.exceptions;
 
+@SuppressWarnings("serial")
 public class LoginException extends Exception {
 	
 	public LoginException() {

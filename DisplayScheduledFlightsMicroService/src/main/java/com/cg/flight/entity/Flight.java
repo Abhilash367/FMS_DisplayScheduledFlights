@@ -8,6 +8,11 @@ import javax.persistence.Table;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
+/*
+ * The persistent class for the flight_details database table.
+ * 
+ */
+
 @Entity
 @Table(name="flight_details")
 @DynamicInsert

@@ -8,13 +8,16 @@ import javax.persistence.Table;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
+/*
+ * The persistent class for the Airports database table.
+ * 
+ */
+
 @Entity
 @Table(name="Airports")
 @DynamicInsert
 @DynamicUpdate
 public class Airport {
-	
-	
 	
 	@Id
 	@Column(name="airport_code", length=10)

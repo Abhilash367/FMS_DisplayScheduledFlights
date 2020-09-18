@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
 
 import com.cg.flight.entity.ScheduledFlight;
 
-//@SpringBootTest
+
 public class TestScheduledFlightRestController {
 	
 	private RestTemplate rt = new RestTemplate();
